@@ -1,0 +1,13 @@
+header {
+  margin-top: 50px;
+}
+
+body {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.submit {
+  margin-top: 20px;
+  display: block;
+}
