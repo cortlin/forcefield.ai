@@ -1,0 +1,66 @@
+$animation-delay: 1s;
+$numberofcolors: 19;
+
+body {margin: 0;}
+
+.context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: prespective(10cm);
+  background-color: black;
+  overflow: hidden;
+}
+
+.bowl {
+  width: 90vmin;
+  height: 90vmin;
+  position: relative;
+  opacity: .2;
+}
+
+.circle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 1px solid black;
+  animation-duration: 19s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  transform-origin: center;
+  mix-blend-mode: screen;
+  animation-name: rotate;
+}
+
+@keyframes rotate {
+  from {
+    transform:        rotate3d(1,1,1,0turn);
+  } to {
+    transform: rotate3d(1,1,1,1turn);
+  }
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  } to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@for $i from 1 through 19 {
+  .circle:nth-child(#{$i}) {
+    border-color: hsla($i * 360 / $numberofcolors, 100%, 50%, 1);
+    animation-delay: $i * $animation-delay;
+  }
+}
