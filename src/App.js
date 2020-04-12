@@ -1,31 +1,14 @@
 import React from 'react';
+import Background from './background';
+import Form from './form';
 
-function App() {
-  return (
-    <div className='context'>
-      <div className='bowl'>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
-        <div className='circle'></div>
+export default class App extends React.Component {
+  render() {
+    return (
+      <div className="page">
+        <Background />
+        <Form />
       </div>
-    </div>
-  );
+    );
+  };
 }
-
-export default App;

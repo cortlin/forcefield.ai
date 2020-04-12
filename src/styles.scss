@@ -1,7 +1,13 @@
 $animation-delay: 1s;
 $numberofcolors: 19;
 
-body {margin: 0;}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
 
 .context {
   display: flex;
@@ -11,8 +17,10 @@ body {margin: 0;}
   height: 100vh;
   transform-style: preserve-3d;
   transform: prespective(10cm);
-  background-color: black;
   overflow: hidden;
+  position: fixed;
+  background-color: black;
+  z-index: -1;
 }
 
 .bowl {
