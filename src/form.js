@@ -9,16 +9,16 @@ function Form() {
                     <img src={logo} alt="Forcefield logo"></img>
                 </div>
 
-                <h1 className="tagline text-gray-400 text-center text-5xl">Forcefield is up to something</h1>
-                <h3 className="text-gray-400 text-center text-3xl">Sign up below to find out</h3>
+                <h1 className="tagline text-gray-400 text-center text-5xl">Understand your contracts</h1>
+                <h3 className="text-gray-400 text-center text-2xl">Sign up below to find out how</h3>
 
 
                 <div className="form-content">
                     <form className="pt-6 pb-8 mb-4" action="" method="post">
                         <div className="md:w-2/3 mx-auto">
-                            <label className="block text-white text-sm font-bold mb-2" for="email" >
+                            {/* <label className="block text-white text-sm font-bold mb-2" for="email" >
                                 Email Address *
-                            </label>
+                            </label> */}
                             <input className="appearance-none block rounded w-full py-2 px-4 text-gray-500 bg-gray-900 leading-tight focus:border-yellow-500" type="email" id="email" placeholder="joe@example.com"/>
                         </div>
 
